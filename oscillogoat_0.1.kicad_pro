@@ -53,7 +53,18 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        },
+        {
+          "gap": 0.9,
+          "via_gap": 0.0,
+          "width": 0.9
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -111,6 +122,7 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
+        "track_not_centered_on_via": "ignore",
         "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
@@ -123,11 +135,11 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.09,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.4,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.25,
+        "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
@@ -135,10 +147,10 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_through_hole_diameter": 0.15,
+        "min_track_width": 0.09,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_via_diameter": 0.25,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -186,7 +198,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.09
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -213,15 +228,26 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.3,
+          "drill": 0.15
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": ""
+      "mpn": "",
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -711,6 +737,12 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "TYPE_SERIAL",
+          "name": "TYPE_SERIAL",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -761,7 +793,7 @@
         "uuid": "8877a40f-24a1-42ad-982d-50bb3cede323"
       }
     ],
-    "used_designators": "FB12-17,S1-2,Q1-2,U2-5,U8-9,U13-24,C2-12,C55-86,C93-112,C114-208,#FLG1,#FLG6,#FLG12-21,#FLG23-25,U1011_1-2,U1009_1-2,U1008_1-2,U1001_1-2,R97_1-2,R1052_1-2,R1048_1-2,C1045_1-2,J3_1-2,C1043_1-2,C1057_1-2,C1039_1-2,C1042_1-2,R1035_1-2,C1037_1-2,TP1016_1-2,C1053_1-2,C1040_1-2,C1041_1-2,C1001_1-2,#FLG_1-2,C1033_1-2,C1054_1-2,C1046_1-2,C1031_1-2,Y1,#PWR1-4,#PWR21-22,#PWR80-82,#PWR88-89,#PWR92-93,#PWR96-97,#PWR100-101,#PWR104-105,#PWR108-109,#PWR114-115,#PWR118-119,#PWR123-124,#PWR129-130,#PWR134-135,#PWR139-140,#PWR144-145,#PWR153-154,#PWR161-162,#PWR169-170,#PWR175-176,#PWR179-183,#PWR185-201,#PWR203-204,#PWR261-264,#PWR269-270,#PWR272,#PWR275-277,#PWR279-283,#PWR285-303,#PWR305-306,#PWR309-314,#PWR318-319,#PWR321-322,#PWR325-329,#PWR331-336,#PWR342-345,#PWR354-357,#PWR392-393,#PWR404-406,#PWR408,#PWR410-411,#PWR415-416,#PWR418-505,#PWR508-513,#PWR515,#PWR517-518,#PWR521,#PWR528-540,#PWR542-581,#PWR1001-1002,#PWR1005-1006,#PWR1009-1010,#PWR1013-1014,#PWR1017-1019,C1008_1-2,TP1017_1-2,IC1-3,IC5,R1039_1-2,C1002_1-2,C1003_1-2,R52_1-2,C1004_1-2,C1048_1-2,R1049_1-2,C1052_1-2,R1043_1-2,C1044_1-2,C1036_1-2,C1005_1-2,C1007_1-2,C1006_1-2,R1-4,R9-14,R55-57,R66-72,R86-87,R89-91,R93-94,R96-144,R1047_1-2,C1032_1-2,R1022_1-2,R1003_1-2,C1056_1-2,C1030_1-2,J5,TP1,TP4,TP6-9,TP21-22,TP26-57,TP59-60,TP63-72,TP75-81,C1047_1-2,L1-6,C1050_1-2,C1049_1-2,C1055_1-2,R1037_1-2,FB1000_1-2,TP1018_1-2,R1046_1-2,FB1001_1-2,C1038_1-2,R1033_1-2,C1035_1-2,J1002_1-2,J4_1-2,R1036_1-2,R1038_1-2,C1034_1-2,R1041_1-2,R1042_1-2,R1044_1-2,R1045_1-2",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
