@@ -1,0 +1,18 @@
+(version 1)
+(rule general_minimum_clearance
+	(constraint clearance (min 0.09mm))
+)
+(rule Minimum_soldermask_sliver
+	(constraint solder_mask_sliver (min 0.1mm))
+)
+(rule zeroed_solder_mask_expansion
+	(constraint solder_mask_expansion (min 0.001mm))
+)
+(rule ftdi_parallel_clearence
+	(constraint clearance (min 0.09mm))
+	(condition "A.hasNetclass('ftdi parallel lines')")
+)
+(rule Routing_diff_pair_1
+	(constraint track_width (min 0.136mm) (opt 0.141mm) (max 0.146mm))
+	(constraint diff_pair_gap (min 0.145mm) (opt 0.15mm) (max 0.155mm))
+)

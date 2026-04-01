@@ -32,7 +32,6 @@
     "visible_items": [
       "vias",
       "footprint_text",
-      "footprint_anchors",
       "ratsnest",
       "grid",
       "footprints_front",
@@ -53,7 +52,7 @@
       "board_outline_area",
       "ly_points"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffff",
+    "visible_layers": "ffffffff_ffffffff_fffffd75_f7ff5bed",
     "zone_display_mode": 0
   },
   "git": {
@@ -77,6 +76,10 @@
       false,
       false,
       false,
+      false,
+      false,
+      false,
+      false,
       false
     ],
     "col_order": [
@@ -89,7 +92,11 @@
       6,
       7,
       8,
-      9
+      9,
+      10,
+      11,
+      12,
+      13
     ],
     "col_widths": [],
     "custom_group_rules": [],
